@@ -94,8 +94,8 @@ class Pong():
 				self.scenario.get_player2().get_x()+70, self.scenario.get_player2().get_y()+10, fill="#006699")
 
 	def start(self):
+		self.scenario.run(self.ball_img, self.canvas)
 		self.win.mainloop()
-		self.scenario.run()
 
 if __name__ == "__main__":
 	p = Pong()
