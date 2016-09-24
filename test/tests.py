@@ -2,8 +2,8 @@
 
 import unittest
 
-from component import Component
-from scenario import Scenario
+from src.component import Component
+from src.scenario import Scenario
 
 class TestComponent(unittest.TestCase):
 
