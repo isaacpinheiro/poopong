@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import Tkinter
+import tkinter
 
 from src.component import Component
 from src.scenario import Scenario
@@ -33,9 +33,9 @@ class Pong():
         self.scenario.set_player1(self.player1)
         self.scenario.set_player2(self.player2)
 
-        self.win = Tkinter.Tk()
+        self.win = tkinter.Tk()
         self.win.title(self.scenario.get_id())
-        self.canvas = Tkinter.Canvas(self.win, width=self.scenario.get_width(), height=self.scenario.get_width(), bg="#ffffff")
+        self.canvas = tkinter.Canvas(self.win, width=self.scenario.get_width(), height=self.scenario.get_width(), bg="#ffffff")
         self.canvas.pack()
 
         self.ball_img = self.canvas.create_oval(self.scenario.get_ball().get_x(), self.scenario.get_ball().get_y(),
@@ -50,13 +50,13 @@ class Pong():
         self.canvas.bind("<Key>", self.move_players)
         self.canvas.focus_set()
 
-        self.frame = Tkinter.Frame(self.win, width=300, height=120)
+        self.frame = tkinter.Frame(self.win, width=300, height=120)
         self.frame.pack(side="bottom")
 
-        self.lable1= Tkinter.Label(self.frame, text="Player 1 - A: Left / D: Right")
+        self.lable1= tkinter.Label(self.frame, text="Player 1 - A: Left / D: Right")
         self.lable1.pack()
 
-        self.lable2= Tkinter.Label(self.frame, text="Player 2 - H: Left / K: Right")
+        self.lable2= tkinter.Label(self.frame, text="Player 2 - H: Left / K: Right")
         self.lable2.pack()
 
     def move_players(self, event):
